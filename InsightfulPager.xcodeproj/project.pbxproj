@@ -140,6 +140,7 @@
 		438196061C512C2B006CB09D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ISP;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Boles;
 				TargetAttributes = {
