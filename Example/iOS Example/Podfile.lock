@@ -1,0 +1,10 @@
+PODS:
+  - InsightfulPager (0.0.1)
+
+DEPENDENCIES:
+  - InsightfulPager
+
+SPEC CHECKSUMS:
+  InsightfulPager: 262969b206072c88f576356083eb6c198ba8a97e
+
+COCOAPODS: 0.39.0
