@@ -1,0 +1,13 @@
+PODS:
+  - InsightfulPager (0.0.1)
+  - PureLayout (3.0.1)
+
+DEPENDENCIES:
+  - InsightfulPager
+  - PureLayout
+
+SPEC CHECKSUMS:
+  InsightfulPager: 262969b206072c88f576356083eb6c198ba8a97e
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+
+COCOAPODS: 0.39.0
