@@ -53,7 +53,7 @@
 - (void)updateViewConstraints
 {
     [self.informationalLabel autoSetDimension:ALDimensionHeight
-                                       toSize:30.0f];
+                                       toSize:40.0f];
     
     [self.informationalLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                               withInset:20.0f];

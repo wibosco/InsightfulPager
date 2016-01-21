@@ -130,7 +130,7 @@
 {
     ISEPageViewController *page = (ISEPageViewController *)viewController;
     
-    page.informationalLabel.text = @"Going back to this page";
+    page.informationalLabel.text = @"willMoveFromViewController method called";
 }
 
 - (void)didMoveToViewController:(UIViewController *)toViewController
@@ -138,14 +138,14 @@
 {
     ISEPageViewController *page = (ISEPageViewController *)toViewController;
     
-    page.informationalLabel.text = @"Moved onto this page";
+    page.informationalLabel.text = @"didMoveToViewController method called";
 }
 
 - (void)scrollingPages
 {
     ISEPageViewController *page = (ISEPageViewController *)self.pagingViewController.focusedViewController;
     
-    page.informationalLabel.text = @"Scrolling";
+    page.informationalLabel.text = @"scrollingPages method called";
 }
 
 @end
