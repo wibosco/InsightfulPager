@@ -1,5 +1,5 @@
 //
-//  ISESecondViewController.h
+//  ISEScrollerViewController.h
 //  iOSExample
 //
 //  Created by William Boles on 21/01/2016.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ISESecondViewController : UIViewController
+@interface ISEScrollerViewController : UIViewController
 
 
 @end

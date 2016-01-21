@@ -12,10 +12,9 @@
 		4381966F1C513C40006CB09D /* ISEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381965E1C513C40006CB09D /* ISEAppDelegate.m */; };
 		438196701C513C40006CB09D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438196611C513C40006CB09D /* Assets.xcassets */; };
 		438196711C513C40006CB09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438196631C513C40006CB09D /* LaunchScreen.storyboard */; };
-		438196721C513C40006CB09D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438196651C513C40006CB09D /* Main.storyboard */; };
 		438196741C513C40006CB09D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438196691C513C40006CB09D /* main.m */; };
-		438196751C513C40006CB09D /* ISEFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381966C1C513C40006CB09D /* ISEFirstViewController.m */; };
-		438196761C513C40006CB09D /* ISESecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381966E1C513C40006CB09D /* ISESecondViewController.m */; };
+		4381967B1C515061006CB09D /* ISEScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381967A1C515061006CB09D /* ISEScrollerViewController.m */; };
+		4381967E1C51506F006CB09D /* ISEPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381967D1C51506F006CB09D /* ISEPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +38,12 @@
 		4381965E1C513C40006CB09D /* ISEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEAppDelegate.m; sourceTree = "<group>"; };
 		438196611C513C40006CB09D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438196641C513C40006CB09D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		438196661C513C40006CB09D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438196681C513C40006CB09D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438196691C513C40006CB09D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4381966B1C513C40006CB09D /* ISEFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEFirstViewController.h; sourceTree = "<group>"; };
-		4381966C1C513C40006CB09D /* ISEFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEFirstViewController.m; sourceTree = "<group>"; };
-		4381966D1C513C40006CB09D /* ISESecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISESecondViewController.h; sourceTree = "<group>"; };
-		4381966E1C513C40006CB09D /* ISESecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISESecondViewController.m; sourceTree = "<group>"; };
+		438196791C515061006CB09D /* ISEScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEScrollerViewController.h; sourceTree = "<group>"; };
+		4381967A1C515061006CB09D /* ISEScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEScrollerViewController.m; sourceTree = "<group>"; };
+		4381967C1C51506F006CB09D /* ISEPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISEPageViewController.h; path = ../../../../../ISEPageViewController.h; sourceTree = "<group>"; };
+		4381967D1C51506F006CB09D /* ISEPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISEPageViewController.m; path = ../../../../../ISEPageViewController.m; sourceTree = "<group>"; };
 		7589B44EB970DD8EC0AFF4DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A1CB5E45BA8B54DDFEA726 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				438196631C513C40006CB09D /* LaunchScreen.storyboard */,
-				438196651C513C40006CB09D /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -165,12 +162,28 @@
 		4381966A1C513C40006CB09D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4381966B1C513C40006CB09D /* ISEFirstViewController.h */,
-				4381966C1C513C40006CB09D /* ISEFirstViewController.m */,
-				4381966D1C513C40006CB09D /* ISESecondViewController.h */,
-				4381966E1C513C40006CB09D /* ISESecondViewController.m */,
+				438196771C515061006CB09D /* Page */,
+				438196781C515061006CB09D /* Scroller */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		438196771C515061006CB09D /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				4381967C1C51506F006CB09D /* ISEPageViewController.h */,
+				4381967D1C51506F006CB09D /* ISEPageViewController.m */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		438196781C515061006CB09D /* Scroller */ = {
+			isa = PBXGroup;
+			children = (
+				438196791C515061006CB09D /* ISEScrollerViewController.h */,
+				4381967A1C515061006CB09D /* ISEScrollerViewController.m */,
+			);
+			path = Scroller;
 			sourceTree = "<group>";
 		};
 		B3B57B1AAA25C46BD81AF883 /* Frameworks */ = {
@@ -274,7 +287,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438196721C513C40006CB09D /* Main.storyboard in Resources */,
 				438196701C513C40006CB09D /* Assets.xcassets in Resources */,
 				438196711C513C40006CB09D /* LaunchScreen.storyboard in Resources */,
 			);
@@ -342,10 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438196761C513C40006CB09D /* ISESecondViewController.m in Sources */,
+				4381967B1C515061006CB09D /* ISEScrollerViewController.m in Sources */,
 				4381966F1C513C40006CB09D /* ISEAppDelegate.m in Sources */,
 				438196741C513C40006CB09D /* main.m in Sources */,
-				438196751C513C40006CB09D /* ISEFirstViewController.m in Sources */,
+				4381967E1C51506F006CB09D /* ISEPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +386,6 @@
 				438196641C513C40006CB09D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		438196651C513C40006CB09D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				438196661C513C40006CB09D /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

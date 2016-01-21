@@ -1,5 +1,5 @@
 //
-//  ISEFirstViewController.h
+//  ISEPageViewController.h
 //  iOSExample
 //
 //  Created by William Boles on 21/01/2016.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ISEFirstViewController : UIViewController
+@interface ISEPageViewController : UIViewController
 
+@property (nonatomic, strong, readonly) UILabel *informationalLabel;
 
 @end
-
