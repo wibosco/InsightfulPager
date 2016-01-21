@@ -21,9 +21,9 @@ Then, run the following command:
 $ pod install
 ```
 
-##Usage
-
 > CocoaPods 0.39.0+ is required to build InsightfulPager.
+
+##Usage
 
 > InsightfulPager comes with an [example project](https://github.com/wibosco/InsightfulPager/tree/master/Example/iOS%20Example) to provide more details than listed above.
 
