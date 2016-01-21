@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/cocoapods/l/InsightfulPager.svg?style=flat)](http://cocoapods.org/pods/InsightfulPager)
 [![Platform](https://img.shields.io/cocoapods/p/InsightfulPager.svg?style=flat)](http://cocoapods.org/pods/InsightfulPager)
 
-InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback
+InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback.
 
 ##Installation via [Cocoapods](https://cocoapods.org/)
 
