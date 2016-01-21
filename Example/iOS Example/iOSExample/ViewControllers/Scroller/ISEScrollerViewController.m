@@ -126,26 +126,26 @@
 
 #pragma mark - ISPPagingDelegate
 
-- (void)willMoveFromViewController:(UIViewController *)viewController
-{
-    ISEPageViewController *page = (ISEPageViewController *)viewController;
-    
-    page.informationalLabel.text = @"willMoveFromViewController method called";
-}
-
 - (void)didMoveToViewController:(UIViewController *)toViewController
              fromViewController:(UIViewController *)fromViewController
 {
     ISEPageViewController *page = (ISEPageViewController *)toViewController;
     
-    page.informationalLabel.text = @"didMoveToViewController method called";
-}
-
-- (void)scrollingPages
-{
-    ISEPageViewController *page = (ISEPageViewController *)self.pagingViewController.focusedViewController;
+    NSUInteger indexOfViewControllerMovedTo = [self.pages indexOfObject:toViewController];
+    NSUInteger indexOfViewControllerMovedFrom = [self.pages indexOfObject:fromViewController];
     
-    page.informationalLabel.text = @"scrollingPages method called";
+    NSString *direction = nil;
+    
+    if (indexOfViewControllerMovedTo > indexOfViewControllerMovedFrom)
+    {
+        direction = @"forwards";
+    }
+    else
+    {
+        direction = @"backwards";
+    }
+    
+    page.informationalLabel.text = [NSString stringWithFormat:@"Moved onto this viewcontroller by scrolling %@", direction];
 }
 
 @end

@@ -41,8 +41,10 @@
     {
         _informationalLabel = [UILabel newAutoLayoutView];
         _informationalLabel.textAlignment = NSTextAlignmentCenter;
+        _informationalLabel.numberOfLines = 2;
         _informationalLabel.font = [UIFont fontWithName:@"HelveticaNeue"
                                                    size:27.0f];
+    
     }
     
     return _informationalLabel;
@@ -53,7 +55,7 @@
 - (void)updateViewConstraints
 {
     [self.informationalLabel autoSetDimension:ALDimensionHeight
-                                       toSize:40.0f];
+                                       toSize:70.0f];
     
     [self.informationalLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                               withInset:20.0f];
