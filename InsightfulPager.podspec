@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "InsightfulPager"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback."
 
   s.homepage     = "http://www.williamboles.me"
