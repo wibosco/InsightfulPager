@@ -25,6 +25,148 @@ $ pod install
 
 ##Usage
 
+####Init
+
+```objc
+#import <InsightfulPager/ISPPagingViewController.h>
+
+....
+
+- (ISPPagingViewController *)pagingViewController
+{
+    if (!_pagingViewController)
+    {
+        _pagingViewController = [[ISPPagingViewController alloc] initWithPageViewController:self.pages[0]
+                                                                                   pageSize:self.view.frame.size
+                                                                                 centerPage:NO];
+        
+        self.pagingViewController.dataSource = self;
+        self.pagingViewController.delegate = self;
+    }
+    
+    return _pagingViewController;
+}
+```
+
+####Adding it as a child viewcontroller
+
+```objc
+#import <InsightfulPager/ISPPagingViewController.h>
+
+....
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self addChildViewController:self.pagingViewController];
+    [self.view addSubview:self.pagingViewController.view];
+    [self.pagingViewController didMoveToParentViewController:self];
+    
+    [self.pagingViewController beginAppearanceTransition:YES
+                                                animated:YES];
+    
+}
+```
+
+####Possible DataSource implementation
+
+```objc
+#import <InsightfulPager/ISPPagingViewController.h>
+
+....
+
+- (UIViewController *)viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    NSUInteger indexOfFocusedViewController = [self.pages indexOfObject:viewController];
+    
+    ISEPageViewController *viewControllerBeforeViewController = nil;
+    
+    if (indexOfFocusedViewController > 0)
+    {
+        viewControllerBeforeViewController = self.pages[(--indexOfFocusedViewController)];
+    }
+    
+    return viewControllerBeforeViewController;
+}
+
+- (UIViewController *)viewControllerAfterViewController:(UIViewController *)viewController
+{
+    NSUInteger indexOfFocusedViewController = [self.pages indexOfObject:viewController];
+    
+    ISEPageViewController *viewControllerAfterViewController = nil;
+    
+    if (indexOfFocusedViewController < ([self.pages count] - 1))
+    {
+        viewControllerAfterViewController = self.pages[(++indexOfFocusedViewController)];
+    }
+    
+    return viewControllerAfterViewController;
+}
+```
+
+####Possible Delegate implementation
+
+```objc
+#import <InsightfulPager/ISPPagingViewController.h>
+
+....
+
+- (void)didMoveToViewController:(UIViewController *)toViewController
+             fromViewController:(UIViewController *)fromViewController
+{
+    ISEPageViewController *page = (ISEPageViewController *)toViewController;
+    
+    NSUInteger indexOfViewControllerMovedTo = [self.pages indexOfObject:toViewController];
+    NSUInteger indexOfViewControllerMovedFrom = [self.pages indexOfObject:fromViewController];
+    
+    NSString *direction = nil;
+    
+    if (indexOfViewControllerMovedTo > indexOfViewControllerMovedFrom)
+    {
+        direction = @"forwards";
+    }
+    else
+    {
+        direction = @"backwards";
+    }
+    
+    page.informationalLabel.text = [NSString stringWithFormat:@"Moved onto this viewcontroller by scrolling %@", direction];
+}
+```
+
+####Less than fullscreen
+
+InsightfulPager allows you to specify different page size so that views outside of the page can be displayed on the screena at the same time. 
+
+```objc
+#import <InsightfulPager/ISPPagingViewController.h>
+
+....
+
+- (ISPPagingViewController *)pagingViewController
+{
+    if (!_pagingViewController)
+    {
+    	CGSize pageSize = CGSizeMake(self.view.frame.size.width,                                                                                        
+                                     self.view.frame.size.height - kISESelectionBarOffset) //kISESelectionBarOffset is a constant float defined else where
+    
+        _pagingViewController = [[ISPPagingViewController alloc] initWithPageViewController:self.pages[0]
+                                                                                   pageSize:pageSize
+                                                                                 centerPage:NO];
+        
+        self.pagingViewController.dataSource = self;
+        self.pagingViewController.delegate = self;
+    }
+    
+    return _pagingViewController;
+}
+```
+
+####Need the currently shown page
+
+If you need the currently shown (in-focus) `UIViewController` page you can use the `focusedViewController` property.
+
 > InsightfulPager comes with an [example project](https://github.com/wibosco/InsightfulPager/tree/master/Example/iOS%20Example) to provide more details than listed above.
 
 > InsightfulPager uses [modules](http://useyourloaf.com/blog/modules-and-precompiled-headers.html) for importing/using frameworks - you will need to enable this in your project.
