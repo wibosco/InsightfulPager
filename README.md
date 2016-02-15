@@ -4,7 +4,7 @@
 
 InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback.
 
-##Installation via [Cocoapods](https://cocoapods.org/)
+##Installation via [CocoaPods](https://cocoapods.org/)
 
 To integrate InsightfulPager into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
