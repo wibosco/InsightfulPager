@@ -14,7 +14,7 @@
 		438196711C513C40006CB09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438196631C513C40006CB09D /* LaunchScreen.storyboard */; };
 		438196741C513C40006CB09D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438196691C513C40006CB09D /* main.m */; };
 		4381967B1C515061006CB09D /* ISEScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381967A1C515061006CB09D /* ISEScrollerViewController.m */; };
-		4381967E1C51506F006CB09D /* ISEPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4381967D1C51506F006CB09D /* ISEPageViewController.m */; };
+		F475105A1C7A494200C6E3D1 /* ISEPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47510591C7A494200C6E3D1 /* ISEPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +42,10 @@
 		438196691C513C40006CB09D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		438196791C515061006CB09D /* ISEScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEScrollerViewController.h; sourceTree = "<group>"; };
 		4381967A1C515061006CB09D /* ISEScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEScrollerViewController.m; sourceTree = "<group>"; };
-		4381967C1C51506F006CB09D /* ISEPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISEPageViewController.h; path = ../../../../../ISEPageViewController.h; sourceTree = "<group>"; };
-		4381967D1C51506F006CB09D /* ISEPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISEPageViewController.m; path = ../../../../../ISEPageViewController.m; sourceTree = "<group>"; };
 		7589B44EB970DD8EC0AFF4DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A1CB5E45BA8B54DDFEA726 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F47510581C7A494200C6E3D1 /* ISEPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEPageViewController.h; sourceTree = "<group>"; };
+		F47510591C7A494200C6E3D1 /* ISEPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,19 +162,10 @@
 		4381966A1C513C40006CB09D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				438196771C515061006CB09D /* Page */,
+				F47510571C7A494200C6E3D1 /* Page */,
 				438196781C515061006CB09D /* Scroller */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		438196771C515061006CB09D /* Page */ = {
-			isa = PBXGroup;
-			children = (
-				4381967C1C51506F006CB09D /* ISEPageViewController.h */,
-				4381967D1C51506F006CB09D /* ISEPageViewController.m */,
-			);
-			path = Page;
 			sourceTree = "<group>";
 		};
 		438196781C515061006CB09D /* Scroller */ = {
@@ -201,6 +192,15 @@
 				C0A1CB5E45BA8B54DDFEA726 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F47510571C7A494200C6E3D1 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F47510581C7A494200C6E3D1 /* ISEPageViewController.h */,
+				F47510591C7A494200C6E3D1 /* ISEPageViewController.m */,
+			);
+			path = Page;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +357,7 @@
 				4381967B1C515061006CB09D /* ISEScrollerViewController.m in Sources */,
 				4381966F1C513C40006CB09D /* ISEAppDelegate.m in Sources */,
 				438196741C513C40006CB09D /* main.m in Sources */,
-				4381967E1C51506F006CB09D /* ISEPageViewController.m in Sources */,
+				F475105A1C7A494200C6E3D1 /* ISEPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
