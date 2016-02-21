@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: InsightfulPager.xcodeproj
+xcode_scheme: InsightfulPager
