@@ -4,7 +4,7 @@
 
 InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback.
 
-##Installation via [CocoaPods](https://cocoapods.org/)
+## Installation via [CocoaPods](https://cocoapods.org/)
 
 To integrate InsightfulPager into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -23,9 +23,9 @@ $ pod install
 
 > CocoaPods 0.39.0+ is required to build InsightfulPager.
 
-##Usage
+## Usage
 
-####Init
+#### Init
 
 ```objc
 #import <InsightfulPager/ISPPagingViewController.h>
@@ -48,7 +48,7 @@ $ pod install
 }
 ```
 
-####Adding it as a child viewcontroller
+#### Adding it as a child viewcontroller
 
 ```objc
 #import <InsightfulPager/ISPPagingViewController.h>
@@ -69,7 +69,7 @@ $ pod install
 }
 ```
 
-####Possible DataSource implementation
+#### Possible DataSource implementation
 
 ```objc
 #import <InsightfulPager/ISPPagingViewController.h>
@@ -105,7 +105,7 @@ $ pod install
 }
 ```
 
-####Possible Delegate implementation
+#### Possible Delegate implementation
 
 ```objc
 #import <InsightfulPager/ISPPagingViewController.h>
@@ -135,7 +135,7 @@ $ pod install
 }
 ```
 
-####Less than fullscreen
+#### Less than fullscreen
 
 InsightfulPager allows you to specify different page size so that views outside of the page can be displayed on the screena at the same time. 
 
@@ -163,7 +163,7 @@ InsightfulPager allows you to specify different page size so that views outside 
 }
 ```
 
-####Need the currently shown page
+#### Need the currently shown page
 
 If you need the currently shown (in-focus) `UIViewController` page you can use the `focusedViewController` property.
 
@@ -171,7 +171,7 @@ If you need the currently shown (in-focus) `UIViewController` page you can use t
 
 > InsightfulPager uses [modules](http://useyourloaf.com/blog/modules-and-precompiled-headers.html) for importing/using frameworks - you will need to enable this in your project.
 
-##Found an issue?
+## Found an issue?
 
 Please open a [new Issue here](https://github.com/wibosco/ConvenientFileManager/issues/new) if you run into a problem specific to InsightfulPager, have a feature request, or want to share a comment. Note that general `UIPageViewController` questions should be asked on [Stack Overflow](http://stackoverflow.com).
 
