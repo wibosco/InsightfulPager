@@ -3,7 +3,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/InsightfulPager.svg?style=flat)](http://cocoapods.org/pods/InsightfulPager)
 <a href="https://twitter.com/wibosco"><img src="https://img.shields.io/badge/twitter-@wibosco-blue.svg?style=flat" alt="Twitter: @wibosco" /></a>
 
-InsightfulPager is an alternative to UIPageViewController that fulfils a similar but provides more feedback.
+InsightfulPager is a more chatty alternative to UIPageViewController.
 
 ## Installation via [CocoaPods](https://cocoapods.org/)
 
